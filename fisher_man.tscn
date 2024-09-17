@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://byjgh0nqdjvkc"]
+
+[ext_resource type="Texture2D" uid="uid://dbtee3cysvlfi" path="res://Assests/background/Leonardo_Phoenix_A_serene_oceanthemed_background_with_a_minima_2.jpg" id="1_2sdr5"]
+[ext_resource type="Script" path="res://button.gd" id="1_8avid"]
+[ext_resource type="FontFile" uid="uid://b10dmpjxnlwef" path="res://Assests/fonts/PositiveForward.otf" id="3_no4rb"]
+
+[node name="FisherMan" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.776471)
+offset_left = -3.0
+offset_top = -401.0
+offset_right = 1149.0
+offset_bottom = 719.0
+texture = ExtResource("1_2sdr5")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 29.0
+offset_top = 50.0
+offset_right = 112.0
+offset_bottom = 94.0
+text = "Back"
+script = ExtResource("1_8avid")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 269.0
+offset_top = 53.0
+offset_right = 764.0
+offset_bottom = 147.0
+theme_override_colors/font_color = Color(0.882353, 0.137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.654902, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_no4rb")
+theme_override_font_sizes/font_size = 40
+text = "Fisher Man"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
